@@ -2,16 +2,18 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import RegexpTokenizer
 import joblib
-
+nltk.download('stopwords')
 
 app = Flask(__name__)
 model = joblib.load(open('NB_spam_model.pkl', 'rb'))
 cv = joblib.load(open('cv.pkl', 'rb'))
 
 ps = PorterStemmer()
+
 sw = set(stopwords.words('english'))
 
 
