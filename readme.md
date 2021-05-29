@@ -21,3 +21,6 @@ This SMS classification model is created using a 5 step approach.
 This model has an accuracy of 98.40 % .
 
 The model was then used to make predictions on the test dataset and exported as  Predicted.csv
+
+
+### Model is deployed at https://spamia.herokuapp.com
